@@ -26,7 +26,7 @@ pipeline
         {
             steps 
             {
-                sh 'sudo scp -r build/* ec2-user@172.31.54.142:/usr/share/nginx/html/'
+                sh 'sudo scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no build/* ec2-user@172.31.54.142:/usr/share/nginx/html/'
             }
         }
     }
