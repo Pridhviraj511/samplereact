@@ -15,25 +15,16 @@ pipeline
             steps 
             {
                 sh '''sudo cd /var/lib/jenkins/workspace/new/
-                sudo npm install'''
+                sudo npm install
+                sudo npm run build'''
             }
         }
-        stage('Test') 
+        stage('Deploy')
         {
             steps 
             {
-                sh './jenkins/scripts/test.sh'
+                sh 'sudo scp -r build/* ec2-user@34.229.137.219:/usr/share/nginx/html/'
             }
         }
-        stage('Deliver') 
-        {
-            steps 
-            {
-                sh './jenkins/scripts/deliver.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh './jenkins/scripts/kill.sh'
-            }
-        }
-
     }
 }
