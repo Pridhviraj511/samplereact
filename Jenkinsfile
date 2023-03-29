@@ -16,6 +16,7 @@ pipeline
             {
                 sh '''sudo cd /var/lib/jenkins/workspace/new/
                 sudo npm install
+                sudo rm -rf /var/lib/jenkins/workspace/new/node_modules/.cache
                 sudo mkdir /var/lib/jenkins/workspace/new/node_modules/.cache
                 sudo chmod -R 777 /var/lib/jenkins/workspace/new/node_modules/.cache
                 sudo npm run build'''
