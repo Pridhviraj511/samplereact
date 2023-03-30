@@ -10,13 +10,19 @@ pipeline
                 git 'https://github.com/Pridhviraj511/samplereact.git'
             }
         }
-        stage('Build') 
+        stage('npmi') 
         {
             steps 
             {
                 sh '''cd /var/lib/jenkins/workspace/new/
-                sudo npm ci
-                sudo rm -rf /var/lib/jenkins/workspace/new/node_modules/.cache
+                sudo npm ci'''
+            }
+        }
+         stage('Build') 
+        {
+            steps 
+            {
+             sh '''sudo rm -rf /var/lib/jenkins/workspace/new/node_modules/.cache
                 sudo mkdir /var/lib/jenkins/workspace/new/node_modules/.cache
                 sudo chmod -R 777 /var/lib/jenkins/workspace/new/node_modules/.cache
                 sudo npm run build'''
