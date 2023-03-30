@@ -18,14 +18,20 @@ pipeline
                 sudo npm ci'''
             }
         }
-         stage('Build') 
+         stage('Directories') 
         {
             steps 
             {
              sh '''sudo rm -rf /var/lib/jenkins/workspace/new/node_modules/.cache
                 sudo mkdir /var/lib/jenkins/workspace/new/node_modules/.cache
-                sudo chmod -R 777 /var/lib/jenkins/workspace/new/node_modules/.cache
-                sudo npm run build'''
+                sudo chmod -R 777 /var/lib/jenkins/workspace/new/node_modules/.cache'''
+            }
+        }
+         stage('Build') 
+        {
+            steps 
+            {
+             sh '''sudo npm run build'''
             }
         }
         stage('Deploy')
