@@ -8,7 +8,7 @@ pipeline
         {
             steps
             {
-                sh 'sudo rm -rf /var/lib/jenkins/workspace/new'
+                sh 'sudo rm -f /var/lib/jenkins/workspace/new/*'
                 git 'https://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@github.com/Pridhviraj511/samplereact.git'
             }
         }
