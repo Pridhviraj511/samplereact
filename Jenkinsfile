@@ -13,12 +13,18 @@ pipeline
                 git 'https://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@github.com/Pridhviraj511/samplereact.git'
             }
         }
+         stage('cd') 
+        {
+            steps 
+            {
+                sh '''cd /var/lib/jenkins/workspace/new/'''
+            }
+        }
         stage('npmi') 
         {
             steps 
             {
-                sh '''cd /var/lib/jenkins/workspace/new/
-                sudo npm ci'''
+                sh '''sudo npm ci'''
             }
         }
          stage('Directories') 
