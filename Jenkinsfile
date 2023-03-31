@@ -24,7 +24,7 @@ pipeline
         {
             steps 
             {
-                npm 'install'
+                sh 'npm install'
             }
         }
          stage('Directories') 
@@ -40,7 +40,7 @@ pipeline
         {
             steps 
             {
-             npm 'run build'
+             sh 'npm run build'
             }
         }
         stage('Deploy')
