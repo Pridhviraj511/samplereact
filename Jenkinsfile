@@ -17,14 +17,14 @@ pipeline
         {
             steps 
             {
-                sh '''cd /var/lib/jenkins/workspace/new/'''
+                sh 'cd /var/lib/jenkins/workspace/new/'
             }
         }
         stage('npmi') 
         {
             steps 
             {
-                sh '''sudo npm ci'''
+                npm 'install'
             }
         }
          stage('Directories') 
@@ -40,7 +40,7 @@ pipeline
         {
             steps 
             {
-             sh '''sudo npm run build'''
+             npm 'run build'
             }
         }
         stage('Deploy')
