@@ -30,7 +30,7 @@ pipeline
         {
             steps 
             {
-             sh '''sudo rm -rf /var/lib/jenkins/workspace/new/node_modules/.cache
+             sh '''sudo rm -rf /var/lib/jenkins/workspace/new/node_modules                
                 sudo mkdir /var/lib/jenkins/workspace/new/node_modules/.cache
                 sudo chmod -R 777 /var/lib/jenkins/workspace/new/node_modules/.cache'''
             }
