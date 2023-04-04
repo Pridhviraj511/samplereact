@@ -22,7 +22,7 @@ pipeline
         {
             steps 
             {
-                sh '''sudo npm clear cache --force
+                sh '''sudo npm cache clean --force
                 sudo npm ci'''
             }
         }
