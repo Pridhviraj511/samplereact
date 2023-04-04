@@ -22,7 +22,8 @@ pipeline
         {
             steps 
             {
-                sh '''sudo npm cache clean --force
+                sh '''sudo rm -rf /var/lib/jenkins/workspace/new/node_modules                
+                sudo npm cache clean --force
                 sudo npm ci'''
             }
         }
@@ -30,8 +31,7 @@ pipeline
         {
             steps 
             {
-             sh '''sudo rm -rf /var/lib/jenkins/workspace/new/node_modules                
-                sudo mkdir /var/lib/jenkins/workspace/new/node_modules/.cache
+             sh '''sudo mkdir /var/lib/jenkins/workspace/new/node_modules/.cache
                 sudo chmod -R 777 /var/lib/jenkins/workspace/new/node_modules/.cache'''
             }
         }
