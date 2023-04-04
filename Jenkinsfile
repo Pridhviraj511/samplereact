@@ -22,7 +22,8 @@ pipeline
         {
             steps 
             {
-                sh 'sudo npm ci'
+                sh '''sudo npm clear cache --force
+                sudo npm ci'''
             }
         }
          stage('Directories') 
