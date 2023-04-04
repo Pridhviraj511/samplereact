@@ -8,7 +8,7 @@ pipeline
         {
             steps
             {
-                git 'https://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@github.com/Pridhviraj511/samplereact.git'
+                git 'https://github.com/Pridhviraj511/samplereact.git'
             }
         }
          stage('cd') 
