@@ -24,6 +24,7 @@ pipeline
             {
                 sh '''sudo rm -rf /var/lib/jenkins/workspace/new/node_modules                
                 sudo npm cache clean --force
+                npm config set registry http://registry.npmjs.org/
                 sudo npm ci'''
             }
         }
