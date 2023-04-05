@@ -15,17 +15,17 @@ pipeline
         {
             steps 
             {
-                sh 'cd /var/lib/jenkins/workspace/new/'
+                sh ''' sudo rm -rf /var/lib/jenkins/workspace/new/node_modules
+                cd /var/lib/jenkins/workspace/new/'''
             }
         }
         stage('npmi') 
         {
             steps 
             {
-                sh '''sudo rm -rf /var/lib/jenkins/workspace/new/node_modules                
-                sudo npm cache clean --force
-                npm config set registry http://registry.npmjs.org/
-                sudo npm ci'''
+                sh '''sudo npm cache clean --force
+                sudo npm config set registry http://registry.npmjs.org/
+                sudo npm i'''
             }
         }
          stage('Directories') 
