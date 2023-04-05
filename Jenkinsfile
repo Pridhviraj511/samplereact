@@ -24,7 +24,6 @@ pipeline
             steps 
             {
                 sh '''sudo npm cache clean --force
-                sudo npm config set registry http://registry.npmjs.org/
                 sudo npm i'''
             }
         }
