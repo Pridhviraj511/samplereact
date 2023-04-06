@@ -15,7 +15,8 @@ pipeline
         {
             steps 
             {
-                sh ''' sudo rm -rf /var/lib/jenkins/workspace/new/node_modules
+                sh ''' sudo su -
+                sudo rm -rf /var/lib/jenkins/workspace/new/node_modules
                 cd /var/lib/jenkins/workspace/new/'''
             }
         }
