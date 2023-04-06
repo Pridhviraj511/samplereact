@@ -15,8 +15,7 @@ pipeline
         {
             steps 
             {
-                sh ''' sudo su -
-                sudo rm -rf /var/jenkins_home/workspace/new/node_modules
+                sh '''rm -rf /var/jenkins_home/workspace/new/node_modules
                 cd /var/jenkins_home/workspace/new/'''
             }
         }
@@ -24,16 +23,16 @@ pipeline
         {
             steps 
             {
-                sh '''sudo npm cache clean --force
-                sudo npm i'''
+                sh '''npm cache clean --force
+                npm i'''
             }
         }
          stage('Directories') 
         {
             steps 
             {
-             sh '''sudo mkdir /var/lib/jenkins/workspace/new/node_modules
-                sudo chmod -R 777 /var/jenkins_home/workspace/new/node_modules/.cache'''
+             sh '''mkdir /var/lib/jenkins/workspace/new/node_modules
+                chmod -R 777 /var/jenkins_home/workspace/new/node_modules/.cache'''
             }
         }
          stage('Build') 
