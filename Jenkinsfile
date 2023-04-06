@@ -16,8 +16,8 @@ pipeline
             steps 
             {
                 sh ''' sudo su -
-                sudo rm -rf /var/lib/jenkins/workspace/new/node_modules
-                cd /var/lib/jenkins/workspace/new/'''
+                sudo rm -rf /var/jenkins_home/workspace/new/node_modules
+                cd /var/jenkins_home/workspace/new/'''
             }
         }
         stage('npmi') 
@@ -32,8 +32,8 @@ pipeline
         {
             steps 
             {
-             sh '''sudo mkdir /var/lib/jenkins/workspace/new/node_modules/.cache
-                sudo chmod -R 777 /var/lib/jenkins/workspace/new/node_modules/.cache'''
+             sh '''sudo mkdir /var/lib/jenkins/workspace/new/node_modules
+                sudo chmod -R 777 /var/jenkins_home/workspace/new/node_modules/.cache'''
             }
         }
          stage('Build') 
