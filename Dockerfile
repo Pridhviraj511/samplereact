@@ -2,11 +2,9 @@ FROM node:19-alpine3.16 as build
 
 WORKDIR /src
 
-EXPOSE 3000
+COPY ./package*.json ./
 
-COPY ./package.json /src
-
-RUN npm install
+RUN npm ci
 
 COPY . ./
 
