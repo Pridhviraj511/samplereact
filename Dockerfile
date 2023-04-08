@@ -4,11 +4,11 @@ WORKDIR /src
 
 EXPOSE 3000
 
-COPY /var/lib/jenkins/workspace/new/package.json /src
+COPY ./package.json /src
 
 RUN npm install
 
-COPY /var/lib/jenkins/workspace/new ./
+COPY . ./
 
 RUN npm run build
 
