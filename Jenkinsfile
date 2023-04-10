@@ -42,18 +42,11 @@ pipeline
              sh 'sudo npm run build'
             }
         }
-        stage('remove index.html')
-        {
-            steps 
-            {
-                sh 'ssh root@52.91.133.197 "sudo rm -f /usr/share/nginx/html/*"'
-            }
-        }
         stage('Deploy')
         {
             steps 
             {
-                sh 'sudo scp -r build/* root@52.91.133.197:/usr/share/nginx/html/'
+                sh 'sudo scp -r build/* root@52.91.133.197:/var/www/html/'
             }
         }
     }
