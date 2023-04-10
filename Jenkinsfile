@@ -46,14 +46,14 @@ pipeline
         {
             steps 
             {
-                sh 'ssh root@172.31.63.72 "sudo rm -f /usr/share/nginx/html/*"'
+                sh 'ssh root@52.91.133.197 "sudo rm -f /usr/share/nginx/html/*"'
             }
         }
         stage('Deploy')
         {
             steps 
             {
-                sh 'sudo scp -r build/* root@172.31.63.72:/usr/share/nginx/html/'
+                sh 'sudo scp -r build/* root@52.91.133.197:/usr/share/nginx/html/'
             }
         }
     }
