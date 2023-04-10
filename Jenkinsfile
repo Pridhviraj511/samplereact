@@ -46,7 +46,7 @@ pipeline
         {
             steps 
             {
-                sh 'ssh root@172.31.63.72 'rm -f /usr/share/nginx/html/*''
+                sh 'ssh root@172.31.63.72 "rm -f /usr/share/nginx/html/*"'
             }
         }
         stage('Deploy')
