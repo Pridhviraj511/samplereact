@@ -46,7 +46,7 @@ pipeline
         {
             steps 
             {
-                sh 'sudo scp -r build/* root@34.229.137.219:/usr/share/nginx/html/'
+                sh 'sudo scp -r build/* root@172.31.63.72:/usr/share/nginx/html/'
             }
         }
     }
