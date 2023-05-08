@@ -4,8 +4,24 @@ pipeline
     
     stages 
     {
-         stage('Download') 
+         stage('Download in Master') 
         {
+            when {
+                branch "master"
+            }
+            steps
+            {
+                script
+                {
+                    def vars = readJSON file: './vars.json'
+                    git '${vars.GITHUB_URL}'
+            }
+        }
+            stage('Download in staging') 
+        {
+            when {
+                branch "staging"
+            }
             steps
             {
                 script
