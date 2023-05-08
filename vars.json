@@ -1,3 +1,8 @@
 {
-"GITHUB_URL" : "https://github.com/Pridhviraj511/samplereact.git"
+  "master": {
+  "GITHUB_URL" : "https://github.com/Pridhviraj511/samplereact.git"
+  }
+  "test": {
+  "GITHUB_URL" : "https://github.com/Pridhviraj511/samplereact.git"
+  }
 }
