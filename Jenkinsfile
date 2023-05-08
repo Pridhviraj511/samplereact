@@ -21,7 +21,7 @@ pipeline
             stage('Download in staging') 
         {
             when {
-                branch "staging"
+                branch "test"
             }
             steps
             {
