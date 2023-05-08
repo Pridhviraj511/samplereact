@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     def var = readJSON file: './var.json'
-                    println "My name is ${var.NAME} "'
+                    println "My name is ${var.NAME}"
                 }
             }
         }
