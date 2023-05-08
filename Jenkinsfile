@@ -14,7 +14,7 @@ pipeline
                 script
                 {
                     def vars = readJSON file: './vars.json'
-                    git '${vars.GITHUB_URL}'
+                    git '${vars[env.master]GITHUB_URL}'
                 }
             }
         }
@@ -28,7 +28,7 @@ pipeline
                 script
                 {
                     def vars = readJSON file: './vars.json'
-                    git '${vars.GITHUB_URL}'
+                    git '${vars[env.test]GITHUB_URL}'
                 }
             }
         }
