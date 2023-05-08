@@ -1,4 +1,4 @@
-def var = readJSON file: './var.json'
+def var=readJSON file: './var.json'
 pipeline {
     agent any
 
@@ -6,7 +6,7 @@ pipeline {
         stage('Read JSON file') {
             steps {
                 script {
-                    def var = readJSON file: './var.json'
+                    def var=readJSON file: './var.json'
                     sh 'echo "My name is ${var.NAME}"'
                 }
             }
