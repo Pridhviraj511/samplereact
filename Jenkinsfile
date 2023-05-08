@@ -8,7 +8,10 @@ pipeline
         {
             steps
             {
-                git 'https://github.com/Pridhviraj511/samplereact.git'
+                script
+                {
+                    def vars = readJSON file: './vars.json'
+                    git '${vars.GITHUB_URL}'
             }
         }
          stage('cd') 
