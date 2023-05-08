@@ -4,8 +4,7 @@ pipeline {
         stage('Read JSON file') {
             steps {
                 script {
-                    def var = readJSON file: './var.json'
-                    sh 'echo "My name is ${var.NAME}"'
+                    sh 'echo "My name is "'
                 }
             }
         }
