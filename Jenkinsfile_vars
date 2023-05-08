@@ -1,4 +1,4 @@
-def var=readJSON file: './var.json'
+def var = readJSON file: './var.json'
 pipeline {
     agent any
 
