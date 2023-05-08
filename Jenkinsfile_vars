@@ -1,7 +1,5 @@
-def var = readJSON file: './var.json'
 pipeline {
     agent any
-
     stages {
         stage('Read JSON file') {
             steps {
