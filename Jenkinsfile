@@ -15,6 +15,7 @@ pipeline
                 {
                     def vars = readJSON file: './vars.json'
                     git '${vars.GITHUB_URL}'
+                }
             }
         }
             stage('Download in staging') 
@@ -28,6 +29,7 @@ pipeline
                 {
                     def vars = readJSON file: './vars.json'
                     git '${vars.GITHUB_URL}'
+                }
             }
         }
          stage('cd') 
