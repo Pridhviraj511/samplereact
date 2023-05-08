@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Read JSON file') {
+            steps {
+                script {
+                    sh 'echo "My name is "'
+                }
+            }
+        }
+    }
+}
