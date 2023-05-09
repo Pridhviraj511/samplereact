@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-    def var = readJSON file: './var.json'
+    
     }
     stages {
         stage(Download) {
@@ -12,6 +12,7 @@ pipeline {
         stage('Read JSON file') {
             steps {
                 script {
+                    def var = readJSON(file: './var.json')
                     echo ${var.NAME}
                 }
             }
