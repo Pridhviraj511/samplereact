@@ -8,7 +8,7 @@ pipeline {
         stage('Read JSON file') {
             steps {
                 script {
-                    println "My name is ${name}"
+                    println "My name is $name"
                 }
             }
         }
