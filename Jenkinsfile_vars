@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     def var = readJSON file:'var.json'
-                    echo "My name is ${var.NAME}"
+                    echo ${var.NAME}
                 }
             }
         }
