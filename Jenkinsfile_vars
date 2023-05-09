@@ -5,6 +5,11 @@ pipeline {
     name = "${var.NAME}"
     }
     stages {
+        stage(Download) {
+            steps {
+                git 'https://github.com/Pridhviraj511/samplereact.git'
+                }
+             }
         stage('Read JSON file') {
             steps {
                 script {
